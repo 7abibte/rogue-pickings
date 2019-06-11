@@ -13,17 +13,19 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1em;
-    
+    height: 100%;
 }
 
 .container{
 	max-width: 1200px;
+    width: 90%;
 	margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    padding: 1em;
+    padding: 1em 0;
+    height: 100%;
 }
 
 h1,
@@ -35,21 +37,21 @@ h4 {
 	font-weight: 700;
 }
 h1 {
-	font-size: 30px;
+	font-size: 1.875em;
 }
 h2 {
-    font-size: 24px;
+    font-size: 1.5em;
 }
 h3 {
-	font-size: 18px;
+	font-size: 1.125em;
 }
 h4 {
-	font-size: 12px;
+	font-size: 0.75em;
 }
 
 p {
-	font-size: 14px;
-	line-height: 21px;
+	font-size: 0.875em;
+	line-height: 1.3125em;
     /**/
 }
 
@@ -57,7 +59,7 @@ p {
 header {
 	/**/
     height: auto;
-	border-bottom: 3px solid #77a466;
+	border-bottom: 0.1875em solid #77a466;
 	margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -71,8 +73,10 @@ header h1 {
 	/**/
 	margin: 0;
     padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
     width: 100%;
     text-align: center;
+    border-bottom: 0.09375em solid #77a466;
 	/**/
 }
 
@@ -92,13 +96,13 @@ header nav ul {
 	margin: 0;
 	padding: 0;
 }
+
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 14px;
-	padding: 0 10px;
+	font-size: 0.875em;
+	padding: 0.5em;
     list-style: none;
-    padding: 0.4em;
 	/**/
 }
 
@@ -124,7 +128,7 @@ header nav ul li a{
 }
 .main-image img {
 	width: 100%;
-	border-bottom: 3px solid #77a466;
+	border-bottom: 0.1875em solid #77a466;
     height: auto;
 }
 
@@ -134,13 +138,13 @@ header nav ul li a{
 }
 .main-title h3 {
 	text-align: left;
-	padding: 5px 0;
+	padding: 0.3125em 0;
 	color: #77a466;
 }
 .main-title p {
 	padding: 0;
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 1em;
+	line-height: 1.5625em;
 }
 
 .section-one,
@@ -149,11 +153,12 @@ header nav ul li a{
 	/**/
     width: 100%;
 	height: auto;
+    border-top: 0.0625em solid #eee;
 	/**/
 }
 
 .section-one h4 {
-	padding: 10px 0;
+	padding: 0.625em 0;
 }
 
 /**/
@@ -166,25 +171,26 @@ header nav ul li a{
 	padding: 0;
 }
 .menu li {
-	padding: 10px 0;
+	padding: 0.625em 0;
 	color:#77a466;
 }
 
 .reviews {
 	color: #333;
-	font-size: 16px;
-	line-height: 21px;
+	font-size: 1em;
+	line-height: 1.3125em;
 }
 
 .address {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1em;
+	line-height: 1.5em;
 }
 
 /*The widths are in a percentage!*/
 footer {
-	height: 50px;
-	border-top: 3px solid #eee;
+	height: auto;
+    width: 100%;
+	border-top: 0.1875em solid #eee;
 	margin: 0 auto;
 	/**/
 	text-align: center;
@@ -197,7 +203,7 @@ footer span {
 	font-family: 'Wisdom Script', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-size: 0.875em;
 }
 
 /*===================================================================
@@ -206,6 +212,33 @@ Desktop Media Queries
 
 @media (min-width: 768px) {
     
+    p {
+        padding: 0 1.875em;
+    }
+    
+    .bottom-section {
+        align-items: flex-start;
+    }
+    
+    .section-one,
+    .section-two,
+    .section-three {
+        width: 33%;
+    }
+    
+    .section-two h4,
+    .section-three h4 {
+	   padding: 0.625em 1.875em;
+    }
+    
+    .section-two {
+	   border-left: 0.0625em solid #eee;
+	   border-right: 0.0625em solid #eee;
+    }
+    
+    footer {
+        padding-top: 1em;
+    }
 }
 
 
@@ -214,45 +247,34 @@ Desktop Media Queries
 ===================================================================*/
 
 @media (min-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+    
     header {
         height: auto;
         width: 100%;
         justify-content: space-between;
+        align-items: center;
         flex-flow: row nowrap;
     }
     
-    p {
-        padding: 0 30px;
-    }
-    
     header h1 {
-        padding: 38px 0;
+        padding: 2.375em 0;
         text-align: left;
+        border-bottom: none;
+        margin-bottom: 0;
     }
     
     header nav {
-        padding: 46px 0;
+        padding: 0;
         text-align: right;
     }
     
     header nav ul li {
         display: inline;
+        padding: 0 0.625em;
     }
     
-    .section-one,
-    .section-two,
-    .section-three {
-        border-top: 1px solid #eee;
-        width: 33%;
-    }
     
-    .section-two h4,
-    .section-three h4 {
-	   padding: 10px 30px;
-    }
-    
-    .section-two {
-	   border-left: 1px solid #eee;
-	   border-right: 1px solid #eee;
-    }
     
