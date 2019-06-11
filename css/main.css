@@ -71,6 +71,8 @@ header h1 {
 	/**/
 	margin: 0;
     padding-bottom: 0.5em;
+    width: 100%;
+    text-align: center;
 	/**/
 }
 
@@ -83,7 +85,7 @@ header nav {
 	/**/
     width: 100%;
     text-align: center;
-    padding-bottom: 1em
+    padding-bottom: 1em;
 }
 
 header nav ul {
@@ -96,7 +98,7 @@ header nav ul li {
 	font-size: 14px;
 	padding: 0 10px;
     list-style: none;
-    padding: 0.5em;
+    padding: 0.4em;
 	/**/
 }
 
@@ -117,12 +119,13 @@ header nav ul li a{
 }
 
 .main-image {
-	height: auto;
+	
 	/**/
 }
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
+    height: auto;
 }
 
 .main-title {
@@ -189,11 +192,20 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 footer span {
 	font-family: 'Wisdom Script', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 14px;
+}
+
+/*===================================================================
+Desktop Media Queries
+===================================================================*/
+
+@media (min-width: 768px) {
+    
 }
 
 
@@ -203,8 +215,10 @@ Desktop Media Queries
 
 @media (min-width: 1200px) {
     header {
-        height: 110px;
-        /*justify-content: space-between;*/
+        height: auto;
+        width: 100%;
+        justify-content: space-between;
+        flex-flow: row nowrap;
     }
     
     p {
@@ -212,52 +226,33 @@ Desktop Media Queries
     }
     
     header h1 {
-        float: left;
         padding: 38px 0;
+        text-align: left;
     }
     
     header nav {
-        float: right;
         padding: 46px 0;
+        text-align: right;
     }
     
     header nav ul li {
         display: inline;
     }
     
-    .top-section,
-    .bottom-section {
-        clear: both;
-    }
-    
-    .main-image {
-        float: left;
-    }
-    
-    .main-title {
-        float: left;
-    }
-    
     .section-one,
     .section-two,
     .section-three {
-        float: left;
         border-top: 1px solid #eee;
         width: 33%;
     }
     
     .section-two h4,
     .section-three h4 {
-	padding: 10px 30px;
+	   padding: 10px 30px;
     }
     
     .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	   border-left: 1px solid #eee;
+	   border-right: 1px solid #eee;
     }
     
-    footer {
-        clear: both;
-    }
-    
-}
